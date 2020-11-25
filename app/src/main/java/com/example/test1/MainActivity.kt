@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         var count:LiveData<Int> = mainActivityViewModel.getInitialcount()
         count.observe(this, Observer {
+
             txt1.setText("Count is "+it)
+
         })
 
         fab.setOnClickListener {
